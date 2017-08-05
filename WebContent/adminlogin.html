@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<script>
+
+function validateForm()
+{
+	var admin =document.forms["offer"]["admin"].value
+	var password = document.forms["offer"]["password"].value
+	  
+	if (admin==null || admin=="")
+	{
+		if (password=="" || password==null)
+		{
+			alert("PLEASE ENTER ALL THE REQUIRED FIELDS");
+			return false;
+		}
+		
+		alert("PLEASE ENTER THE ADMIN NAME");
+		return false;
+	}
+	if (password=="" || password==null)
+	{
+		alert("PLEASE ENTER THE PASSWORD");
+		return false;
+	}
+	
+
+}
+</script>
+<head><title>Online Result System</title><meta name="description" content="website description"><meta name="keywords" content="website keywords, website keywords"><meta http-equiv="content-type" content="text/html; charset=windows-1252"><link rel="stylesheet" type="text/css" href="style.css" title="style"></head><body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <img src ="sudaman1.png">
+          <h2>Online Result System</h2>
+        </div>
+      </div>
+      
+    </div>
+    <div id="site_content">
+     
+      <div id="content">
+        <!-- insert the page content here -->
+        <form name = "offer" action="admin_validate.jsp" method="post" onsubmit = "return validateForm()">
+       
+          <div class="form_settings">
+            <p><span>Admin</span><input class="contact" type="text" name="admin" value=""></p>
+            <p><span>Password</span><input class="contact" type="password" name="password" value=""></p>
+            <p style="padding-top: 15px"><span> </span><input class="submit" type="submit" name="contact_submitted" value="SIGN IN"></p>
+          </div>
+        </form></div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      Copyright © sudaman | <a href="http://www.lacm.edu.np">LACM</a> 
+</div>
+  </div>
+</body></html>
